@@ -148,7 +148,11 @@ class Extractor(object):
                 x = cH[0].replace(" ","")
                 l = len(x)
                 y = x[-3:-1]
-                qYear = self.yearMap[y]
+                print(y)
+                if y in self.yearMap:
+                    qYear = self.yearMap[y]
+                else:
+                    return None
                 qMonth = self.monthMap[cH[0][4:7]]
                 ret[q] = {}
                 ret[y] = {}

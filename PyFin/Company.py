@@ -220,7 +220,7 @@ class Company(object):
     def assignFinancialStatements(self, soup):
         L = []
 
-        """
+        
         try:
             L = htmlExtractor.getFinancialStatements(soup) 
         except Exception:
@@ -242,13 +242,13 @@ class Company(object):
         
         try:
             if len(L) > 1:
-                self.bsQ = htmlExtractor.createBalanceSheets(L[1][0], Extract.Period.quarter)
+                self.bsQ = htmlExtractor.createBalanceSheets(L[1][0], Period.Quarter)
         except Exception:
             self.Exceptions["bsQ"] = traceback.format_exc()
         
         try:
             if len(L[1]) > 0:
-                self.bsA = htmlExtractor.createBalanceSheets(L[1][1], Extract.Period.year)
+                self.bsA = htmlExtractor.createBalanceSheets(L[1][1], Period.Year)
         except Exception:
             self.Exceptions["bsA"] = traceback.format_exc()
         
@@ -272,7 +272,7 @@ class Company(object):
         self.bsA = htmlExtractor.createBalanceSheets(L[1][1], Period.Year)
         self.cfQ = htmlExtractor.createCashFlowStatements(L[2][0])
         self.cfA = htmlExtractor.createCashFlowStatements(L[2][1])
-        
+        """
         if self.isQ:
             for i in self.isQ:
                 self.IncomeStatements.append(i)

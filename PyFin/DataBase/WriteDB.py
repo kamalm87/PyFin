@@ -630,9 +630,9 @@ class WriteDB(object):
         bs = BalanceSheets()
 
         if b.Period == Period.Year:
-            b.Annual = True
+            bs.Annual = True
         else:
-            b.Annual= False
+            bs.Annual= False
 
         m = self.getCurrencyMultipler(c.Currency)
 
@@ -705,9 +705,9 @@ class WriteDB(object):
         cfs = CashFlowStatements()
 
         if cf.Period == Period.Year:
-            cf.Annual = True
+            cfs.Annual = True
         else:
-            cf.Annual = False
+            cfs.Annual = False
 
         m = self.getCurrencyMultipler(c.Currency)
         
