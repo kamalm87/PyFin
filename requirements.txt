@@ -1,5 +1,5 @@
 BeautifulSoup4==4.3.2
 psycopg2==2.5.4
 SQLAlchemy==0.9.8
-urllib3==1.7.1
+urllib3==1.26.5
 
